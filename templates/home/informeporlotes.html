@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+   
+
+    @page {
+            size: letter;
+            margin: 5mm 20mm 5mm 20mm; /* change the margins as you want them to be. */
+
+
+        }
+
+    .img {
+        width: 5cm;
+        text-align: center;
+        margin: 0;
+
+        }
+
+        #invoice thead tr th {
+        
+        border: 1px solid black;
+        margin: 5px;
+        padding-top: 5px;
+        line-height : 20px;
+
+    }
+
+    #invoice th {
+        
+        border: 1px solid black;
+        margin: 5px;
+        font-size: 15px;
+        text-align: center;
+        background-color: #FF5555;
+
+    }
+
+    h1
+    {
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    h2
+    {
+        line-height: 10px;
+        font-size: 13px;
+    }
+    h3
+    {
+        line-height: 10px;
+        font-size: 13px;
+
+    }
+
+    #invoice tbody tr {
+        padding: 3px;
+        text-align: center;
+        font-size: 13px;
+        background-color: #FADBD8;
+        border: 1px solid black;
+    }
+
+   
+</style>
+</head>
+
+<body>
+    <p style="justify-content: center; text-align: left;"><img src="{{ iconsarita }}" class="img">
+        
+             <br></p>
+
+
+<p class="head">
+    <h1 style="text-align: right;">Concepción Las Minas, {{fecha}}</h1>
+    <h2 style="text-align: center;"><l style="font-size: 25px;">Informe por lote</h2>
+    <h3 style="text-align: left;"><l style="font-size: 15px;">Lote: {{lote.tipo_lote}}</h3>
+    <h3 style="text-align: left;"><l style="font-size: 15px;">Fecha de Vencimiento: {{lote.tipo_lote.fechavencimiento}}</h3>
+
+
+</p><br>
+<p class="cuerpo">
+<table id="invoice">
+    <thead>
+    <tr>
+        <th>Producto</th>
+        <th>Existencia</th>
+       
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for l in detallelote %}
+    {% if l.lote == lote.tipo_lote.lote %}
+  
+        <tr>
+            <td>{{ l.producto.nombre }}</td>
+            <td>{{ l.subexistencias }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+   </tbody>
+
+   <p class="cuerpo">
+    
+</p> 
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ SARITA }} SARISYS{% endblock %}
+{% block extrastyle%}
+
+
+
+	<style>
+	#header {
+		background: #F44336; 
+        justify-content:center;
+        font-size: 60px;
+
+	}
+
+    #branding h1 {
+    padding: 0;
+    margin: 0 20px 0 0;
+    font-weight: 300;
+    font-size: 24px;
+    color: #f5dd5d;
+    background: #F44336;
+    justify-content:center;
+    text-align:center;
+}
+
+
+h1 {
+    margin: 0 0 20px;
+    font-weight: 300;
+    font-size: 40px;
+    color: #17202A;
+    
+    justify-content:center;
+    text-align:center;
+    border-radius: 35px 35px 35px 35px;
+    display: auto;
+
+}
+
+#branding h1 a:link, #branding h1 a:visited {
+    background: #F44336;
+    color: #f5dd5d;
+    font-size: 50;
+    display: auto;
+}
+
+
+
+#content-related .module {
+    background: #FDEDEC;
+    color: #17202A;
+    font-weight: bolder;
+    display: auto;
+    }
+
+#content-related .module h2 {
+    background: none;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #154360;
+    font-size: 22px;
+    color: #F39C12;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    font-size: 25px;
+    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    color: #333;
+    background: #fff;
+
+}
+
+th {
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: 1px solid #2980B9;
+    vertical-align: top;
+    padding: 8px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Times New Roman, sans-serif;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #black;
+    border: 1px solid #21618C;
+    font-family: sans-serif;
+    font-weight: 400;
+    background:#F44336;
+    font-weight: bolder;
+    border-radius: 5px 0px 5px 0px;
+    text-align:center;
+
+    
+}
+
+a.section:link, a.section:visited {
+    color: #FDFEFE;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #17202A;
+    text-decoration: none;
+}
+
+.dashboard .module table td a {
+    padding-right: 0;
+    border-bottom: 1px solid #17202A;
+   
+
+}
+
+.dashboard #content{
+        width: auto;
+        margin-left: 3cm;
+    }
+
+
+#content-related .module h2 {
+    background: none;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #154360;
+    font-size: 22px;
+    color: #17202A;
+    border: 0px;
+    }
+
+    .object-tools a.addlink {
+    background-image: url(../img/tooltag-add.svg);
+    background: #fff;
+    color: #2980B9;
+    border: 1px solid #2980B9;
+    background
+}
+
+.object-tools a.addlink:hover {
+    border: 1px solid #2980B9;
+    background: #FCF3CF ;
+    background-image: url(../img/tooltag-add.svg);
+    color: #2980B9;
+    border: 1px solid #FDFEFE;
+
+}
+
+#user-tools {
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.85;
+    text-align: left;
+    font-size: 20px;
+}
+
+#user-tools a:hover {
+    display: inline-block;
+    line-height: 1.4;
+    background:#F9E79F; 
+    font-size: 25px;
+    justify-content:center;
+    text-align:center;
+}
+
+div.breadcrumbs a:hover {
+    color: #2980B9;
+    background:#F9E79F;
+}
+
+    table thead th .text a {
+    display: auto;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #2980B9;
+}
+
+#changelist-filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 240px;
+    background: #FEF9E7;
+    border-left: none;
+    margin: 0;
+    border: none;
+}
+
+#changelist-filter h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 15px;
+    margin-bottom: 12px;
+    border-bottom: none;
+    border: none;
+    background: #F44336;
+    color: #FDFEFE;
+}
+
+#changelist-filter h3 {
+    font-weight: 400;
+    font-size: 17px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    color: #145A32;
+    font-weight: bolder;
+}
+
+ia (max-width: 1024px)
+td, th {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #154360;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 1em 0 .5em 0;
+    justify-content:center;
+    text-align:center;
+    color: #2980B9;
+}
+
+h3 {
+    font-size: 14px;
+    margin: .8em 0 .3em 0;
+    color: #666;
+    font-weight: bold;
+    text-align:center;
+}
+
+.login .submit-row {
+    clear: both;
+    padding: 1em 0 0 9.4em;
+    margin: 0;
+    border: none;
+    background: none;
+    
+    text-align:center;
+    justify-content:center;
+}
+
+div.breadcrumbs {
+    background: #FDEDEC;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #17202A;
+    text-align: left;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #F44336;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    float: right;
+    border: none;
+    font-weight: 400;
+    background: #F44336;
+}
+
+.object-tools a.addlink {
+    background-image: url(../img/tooltag-add.svg);
+    background: #FDEDEC;
+    color: #17202A;
+    border: 1px solid #F44336;
+    background: ;
+}
+
+div.breadcrumbs a {
+    color: #17202A;
+}
+	</style>
+    
+
+{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="/media/logo_sarita.png" height="120px" border="none" 
+    background: none><h1></h1></a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
